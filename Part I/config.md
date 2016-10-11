@@ -1,5 +1,7 @@
 # 配置
 
+
+
 ## 配置文件
 
 配置文件为项目根目录的`hii.config.js` - **基本配置文件**,`hii.config.[env].js` - **环境配置文件**，其中，`[env]`可以为下列值：
@@ -18,7 +20,9 @@
 * `基础配置`: `webpack`所需要的一些配置
 * `扩展配置`: 需要扩展的一些配置，这些配置字段不覆盖`内置配置`，而是合并（**只有对象或者数组类型的配置才合并，其他基本类型字段还是覆盖\*** `自定义配置`: 用户自定义插件或者其他的一些配置
 
-## 基础配置
+### 内置配置
+
+### 基础配置
 
 基本配置包括:
 
@@ -101,13 +105,13 @@ module.exports = {
 };
 ```
 
-#### 扩展配置
+### 扩展配置
 
 除了上面的基本配置之外，`hiipack`还支持一些额外的配置来实现一些其他的特性，比如`loaders`可以添加处理其他类型文件的能力，而不需要更新`hiipack`本身。
 
 一个具体的场景：`hiipack`默认不支持`mustache`模板的编译，而我们要在项目中使用`mustache`, 我们可以自己配置`mustache-loader`来支持，**而且我们不需要在前端项目中安装**`mustache-loader`**, 也不需要更新**`hiipack`, 只要配置了`loaders`, `hiipack`内部会自动安装相应的内容。
 
-更多配置包括:
+扩展配置包括:
 
 * `loaders`: 项目需要使用的额外的`loader`\(loader相关的内容可以查看[webpack的文档](https://webpack.github.io/docs/loaders.html)\)，这些`loader`不在`hiipack`原生支持的范围之内。**原生支持的不需要在这里配置**。
 
@@ -116,7 +120,7 @@ module.exports = {
 
 具体使用例子:
 
-```
+```javascript
 // hii.config.js
 module.exports = {
     //...
@@ -166,8 +170,4 @@ module.exports = {
     }
 }
 ```
-
-
-
-
 
