@@ -29,26 +29,9 @@ npm install -g zdying/hiipack
 npm install -g https://github.com/zdying/hiipack#branch-name
 ```
 
+## 检查安装结果
 
+hiipack 安装完成后，系统中会增加 `hiipack`命令和 `hii` 命令，两个一样，后者更简短。可以执行 `hiipack` 或者 `hii`, 如果能看到版本信息，表示安装成功。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+使用 `hii -h` 或者 `hii --help`可以查看帮助信息。
 
