@@ -1,21 +1,20 @@
-# 项目配置
-
-配置文件为项目根目录的`hii.config.js`,`hii.config.[env].js`，其中，`[env]`可以为下列值：
-
-* `development`: 开发环境的配置
-* `beta`: 测试环境的配置
-* `production`: 线上环境的配置
+# 配置
 
 
 
-第一个为-`基本配置文件`，后面为不同环境（*开发环境*/*beta测试环境*/*生产环境*)对应的配置文件－`环境配置文件`，`环境配置文件`会跟`基本配置文件`合并, **`环境配置文件`中的字段直接覆盖`基本配置文件`中的字段**。
+## 配置文件
 
-* `hii.config.js`: 基本配置文件
-* `hii.config.development.js`: 本地开发环境采用的配置，`hii start`启动服务后使用
-* `hii.config.beta.js`: 打包beta环境代码采用的配置，`hii pack`时使用
-* `hii.config.production.js`: 打包prod环境代码采用的配置，`hii min`时使用
+配置文件为项目根目录的`hii.config.js` - **基本配置文件**,`hii.config.[env].js` - **环境配置文件**，其中，`[env]`可以为下列值：
 
-### 配置字段
+* `development`: 开发环境的配置，`hii start`启动服务后使用
+* `beta`: 测试环境的配置，`hii pack`时使用
+* `production`: 线上环境的配置，`hii min`时使用
+
+`环境配置文件`会跟`基本配置文件`合并, **`环境配置文件`中的字段直接覆盖`基本配置文件`中的字段**。
+
+
+
+## 配置字段
 
 配置字段分为三类:
 
