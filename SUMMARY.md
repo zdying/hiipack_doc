@@ -10,5 +10,7 @@
     * [Hosts](Part II/hosts.md)
     * 代理
         * [配置文件](Part II/config_file.md)
+        * [语法](Part II/syntax.md)
+        * [作用域](Part II/scope.md)
         * [指令](Part II/commands.md)
 
