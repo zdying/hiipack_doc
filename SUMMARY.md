@@ -5,5 +5,6 @@
    * [简介](jian_jie.md)
    * [安装](an_zhuang.md)
    * 开始
+   * 配置
 * Part II - Hiipack Advanced
 
