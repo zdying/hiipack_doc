@@ -8,6 +8,7 @@
     * [配置](Part I/config.md)
 * Part II - Hiipack Advanced
     * [Hosts](Part II/hosts.md)
+        * [语法](Part II/hosts_syntax.md)
     * 代理
         * [配置文件](Part II/config_file.md)
         * [语法](Part II/syntax.md)
