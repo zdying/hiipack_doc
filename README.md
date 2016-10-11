@@ -4,5 +4,5 @@
 
 由于时间、经历有限，难免存在诸多疏漏或者不到位的地方，还请谅解！
 
-本书发布在 [https:\/\/zdying.gitbooks.io\/hiipack\_doc\/content\/ ](https://zdying.gitbooks.io/hiipack_doc/content/)。
+本书发布在 [https://zdying.gitbooks.io/hiipack\_doc/content/ ](https://zdying.gitbooks.io/hiipack_doc/content/)。
 
