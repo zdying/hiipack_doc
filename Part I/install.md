@@ -29,7 +29,6 @@ export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
 
 # 安装 
 npm install hiipack -g --registry=https://registry.npm.taobao.org
-
 ```
 
 ## 从 Github 安装
