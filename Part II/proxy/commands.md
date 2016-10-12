@@ -74,11 +74,17 @@ key：Cookie名称
 proxy_hide_cookie from;
 ```
 
+
+
+
 ### 代理响应相关
 
 代理响应相关的指令用于配置代理服务器响应浏览器的`Response`对象。
 
-#### set\_header
+
+
+
+#### set_header
 
 作用：添加Header字段
 
