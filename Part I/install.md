@@ -4,13 +4,13 @@
 
 Hiipack 已经发布到 [npmjs.com](https://www.npmjs.com/) , 可以通过npm安装：
 
-```
+```bash
 npm install -g hiipack
 ```
 
 如果要安装 DEV 或者 BETA 版本（不稳定），可以使用：
 
-```
+```bash
 npm install -g hiipack@dev  # dev版本
 npm install -g hiipack@beta # beta版本
 ```
