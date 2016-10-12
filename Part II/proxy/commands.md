@@ -6,20 +6,20 @@
 
 ### 全局指令
 
-全局指令，用来在全局作用域中做一些配置。
+> 全局指令，用来在全局作用域中做一些配置。
 
 #### set
 
-作用：定义变量
+_作用_：定义变量
 
-参数：
+_参数_：
 
 ```bash
 key：变量名称
 value：值
 ```
 
-例子：
+_例子_：
 
 ```bash
 set $server hiipack;
@@ -38,16 +38,16 @@ set $server hiipack;
 
 #### proxy_set_header
 
-作用：设置请求头部字段
+_作用_：设置请求头部字段
 
-参数：
+_参数_：
 
 ```
 key：字段名称
 value：字段值
 ```
 
-例子：
+_例子_：
 
 ```bash
 proxy_set_header Host some.example.com
@@ -59,15 +59,15 @@ proxy_set_header Host some.example.com
 
 #### proxy_hide_header
 
-作用：删除请求头部字段
+_作用_：删除请求头部字段
 
-参数：
+_参数_：
 
 ```bash
 key: 要删除的字段名称
 ```
 
-例子：
+_例子_：
 
 ```bash
 proxy_set_header Host some.example.com
@@ -78,16 +78,16 @@ proxy_set_header Host some.example.com
 
 #### proxy_set_cookie
 
-作用：设置请求Cookie
+_作用_：设置请求Cookie
 
-参数：
+_参数_：
 
 ```bash
 key：Cookie名称
 value：Cookie值
 ```
 
-例子：
+_例子_：
 
 ```bash
 proxy_set_cookie from hiipack;
@@ -99,15 +99,15 @@ proxy_set_cookie from hiipack;
 
 #### proxy_hide_cookie
 
-作用：删除请求Cookie字段
+_作用_：删除请求Cookie字段
 
-参数：
+_参数_：
 
 ```bash
 key：Cookie名称
 ```
 
-例子：
+_例子_：
 
 ```bash
 proxy_hide_cookie from;
@@ -125,16 +125,16 @@ proxy_hide_cookie from;
 
 #### set_header
 
-作用：添加Header字段
+_作用_：添加Header字段
 
-参数：
+_参数_：
 
 ```bash
 key：Header字段名称
 value：Header字段的值
 ```
 
-例子：
+_例子_：
 
 ```bash
 set_header SERVER HIIPACK;
@@ -145,15 +145,15 @@ set_header SERVER HIIPACK;
 
 #### hide_header
 
-作用：删除Header字段
+_作用_：删除Header字段
 
-参数：
+_参数_：
 
 ```bash
 key：Header字段名称
 ```
 
-例子：
+_例子_：
 
 ```bash
 hide_header Server;
@@ -164,15 +164,15 @@ hide_header Server;
 
 #### set_cookie
 
-作用：设置Cookie字段
+_作用_：设置Cookie字段
 
-参数：
+_参数_：
 
 ```bash
 key：Cookie名称
 ```
 
-例子：
+_例子_：
 
 ```bash
 set_cookie SESSION_ID;
@@ -182,15 +182,15 @@ set_cookie SESSION_ID;
 
 #### hide_cookie
 
-作用：删除Cookie字段
+_作用_：删除Cookie字段
 
-参数：
+_参数_：
 
 ```bash
 key：Cookie名称
 ```
 
-例子：
+_例子_：
 
 ```bash
 hide_cookie SESSION_ID;
