@@ -66,5 +66,56 @@ proxy_set_cookie from hiipack;
 
 #### proxy_hide_cookie
 
+作用：删除请求Cookie字段
 
-': function(key){ log.debug('proxy_hide_cookie -', this, key); log.info('proxy_hide_cookie will comeing soon'); // var cookie = this.request.cookie || this.request.Cookie; // var str = key + '=.+?; '; // // if(cookie){ // // this.request.cookie = (cookie + '; ').replace(new RegExp(str, 'g'), '').replace(/; $/, '') // this.request.Cookie = 'abcd=dddd'; // } }, // ## response config 'hide_cookie': function(key){ this.response.headers['Set-Cookie'] = key + '=; Expires=' + new Date(1); }, 'hide_header': function(key, value){ log.debug('hide_header -', this, key, value); delete this.response.headers[key]; }, 'set_header': function(key, value){ log.debug('set_header -', this, key, value); this.response.headers[key] = value; }, 'set_cookie': function(key, value){ log.debug('set_cookie -', this, key, value); this.response.headers['Set-Cookie'] = key + '=' + value; }, proxy_pass: function(value){ this.props.proxy = value; }, // global commands 'set': function(key, value){ this.props[key] = value; }};
+参数：
+    
+    key：Cookie名称
+
+
+例子：
+
+```bash
+proxy_hide_cookie from;
+```
+
+
+### 代理响应相关
+
+代理响应相关的指令用于配置代理服务器响应浏览器的`Response`对象。
+
+
+
+#### hide_cookie
+
+作用：删除Cookie字段
+
+参数：
+
+ key：Cookie名称
+
+例子：
+
+```bash
+hide_cookie Access-Control-Allow-Origin;
+```
+
+
+
+#### hide_header
+
+作用：删除Header字段
+
+参数：
+
+ key：Header字段名称
+
+例子：
+
+```bash
+
+hide_cookie Server;
+
+```
+
+'hide_header': function(key, value){ log.debug('hide_header -', this, key, value); delete this.response.headers[key]; }, 'set_header': function(key, value){ log.debug('set_header -', this, key, value); this.response.headers[key] = value; }, 'set_cookie': function(key, value){ log.debug('set_cookie -', this, key, value); this.response.headers['Set-Cookie'] = key + '=' + value; }, proxy_pass: function(value){ this.props.proxy = value; }, // global commands 'set': function(key, value){ this.props[key] = value; }};
