@@ -59,6 +59,8 @@ $domain => {
 
 `location` 用来指定域名中的一个具体的路径，这个路径的所有配置都在 `location` 块中。
 
+注意:**`location`必须位于`domain`块中**。
+
 #### 语法
 
 ```bash
