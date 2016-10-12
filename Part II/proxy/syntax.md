@@ -33,12 +33,12 @@ location [folder|file|regexp|variable] {
 #### 例子
 
 ```bash
-## 直接使用域名
+# 直接使用域名
 some.example.com => {
     # ...
 }
 
-## 或者使用变量
+# 或者使用变量
 $domain => {
     # ...
 }
@@ -59,24 +59,23 @@ location [folder|file|regexp|variable] {
 #### 例子
 
 ```bash
-
-## 目录
+# 目录
 location /some/path/ {
     # ...
 }
 
-## 具体文件
+# 具体文件
 location /some/file.htm {
     # ...
 }
 
-## 正则表达式
+# 正则表达式
 
 location ~ /^\/some\/(path|path1)\/.*/ {
     # ...
 }
 
-## 变量
+# 变量
 
 location $some/$path {
     # ...
