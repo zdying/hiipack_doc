@@ -11,7 +11,7 @@
 * Part II - Hiipack Advanced
     * [Hosts](Part II/hosts/README.md)
         * [语法](Part II/hosts/syntax.md)
-    * [代理](Part II/README.md)
+    * [代理](Part II/proxy/README.md)
         * [配置文件](Part II/proxy/config_file.md)
         * [语法](Part II/proxy/syntax.md)
         * [作用域](Part II/proxy/scope.md)
