@@ -47,7 +47,7 @@ proxy_set_header Host some.example.com
 
 参数：
 
-```
+```bash
 key：Cookie名称
 value：Cookie值
 ```
