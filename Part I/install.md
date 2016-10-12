@@ -23,7 +23,7 @@ npm install -g hiipack@beta # beta版本
 > 
 > 3. 为了解决以上两个问题，可以使用下面的代码安装
 
-```
+```bash
 # node-sass二进制文件镜像 
 export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass" 
 
@@ -35,7 +35,7 @@ npm install hiipack -g --registry=https://registry.npm.taobao.org
 
 也可以从 Github 源码安装：
 
-```
+```bash
 # 从master分支安装
 npm install -g zdying/hiipack
 
