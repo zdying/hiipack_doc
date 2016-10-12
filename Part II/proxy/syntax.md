@@ -123,6 +123,8 @@ set_cookie UserID some_user_id;
 
 ## 注释
 
+用来注释某些不需要的内容，只支持单行注释。
+
 #### 语法
 
 ```bash
@@ -135,6 +137,10 @@ set_cookie UserID some_user_id;
 # 注释内容
 set var value; # 设置变量
 ```
+
+
+
+#### 简写语法
 
 
 
