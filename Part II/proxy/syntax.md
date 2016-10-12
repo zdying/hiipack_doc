@@ -27,7 +27,7 @@ set $var_name value
 
 ## domain
 
-\`domain\` 用来指定一个域名，这个域名的所有配置都在 \`domain\` 块中。
+`domain` 用来指定一个域名，这个域名的所有配置都在 `domain` 块中。
 
 #### 语法：
 
