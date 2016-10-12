@@ -6,6 +6,14 @@
 
 ## 变量
 
+#### 语法
+
+```bash
+$变量名
+```
+
+#### 例子
+
 ```
 $var_name
 ```
@@ -13,6 +21,16 @@ $var_name
 ## domain
 
 \`domain\` 用来指定一个域名，这个域名的所有配置都在 \`domain\` 块中。
+
+#### 语法：
+
+```bash
+location [folder|file|regexp|variable] {
+    # ...
+}
+```
+
+#### 例子
 
 ```bash
 ## 直接使用域名
@@ -30,9 +48,18 @@ $domain => {
 
 \`location\` 用来指定域名中的一个具体的路径，这个路径的所有配置都在 \`location\` 块中。
 
-
+#### 语法
 
 ```bash
+location [folder|file|regexp|variable] {
+    # ...
+}
+```
+
+#### 例子
+
+```bash
+
 ## 目录
 location /some/path/ {
     # ...
@@ -56,12 +83,17 @@ location $some/$path {
 } 
 ```
 
+
+
+
+
+
 ## 命令
 
 命令用于设置一些变量，或者对`request`/`response`做一些操作。
 
 ```
-# 语法: 命令 参数1 参数2 ... 参数N
+## 语法: 命令 参数1 参数2 ... 参数N
 ```
 
 ## 注释
