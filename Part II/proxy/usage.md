@@ -19,7 +19,7 @@
 * 没有hosts缓存问题
 * 新打开的窗口独立于其他的浏览器窗口，互不影响
 
-## 手动配置 {#configyourself}
+## 手动配置 {#config-yourself}
 
 目前，hiipack 打开的 Chrome 浏览器窗口，不会加载用户以前的配置、插件，这样从某种意义上不是很方便。
 
@@ -35,7 +35,7 @@
 
 这样会有一个问题就是，那些原本不需要走代理的地址，其实是没有必要通过 hiipack 代理的，这样增加了 hiipack 的负担，也影响了响应的速度。
 
-因此，hiipack 还提供了一种代理的方式：_**自动代理**_（有关自动代理的内容，可以参考：[Proxy-Auto-Conifg](https://en.wikipedia.org/wiki/Proxy_auto-config) 或者 [PAC（代理自动配置）](http://baike.baidu.com/item/PAC/16292100)）。
+因此，hiipack 还提供了一种代理的方式：**_自动代理_**（有关自动代理的内容，可以参考：[Proxy-Auto-Conifg](https://en.wikipedia.org/wiki/Proxy_auto-config) 或者 [PAC（代理自动配置）](http://baike.baidu.com/item/PAC/16292100)）。
 
 有了自动代理，**只有用户配置的**`hosts`**中的域名和**`rewrite`**中的域名才会通过代理服务器**。
 
