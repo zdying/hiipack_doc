@@ -6,7 +6,7 @@
     * [安装](Part I/install.md)
     * [开始](Part I/get_start.md)
     * [配置](Part I/config/README.md)
-        * [配置文件](Part I/confile/file.md)
+        * [配置文件](Part I/config/file.md)
         * [配置字段](Part I/config/field.md)
 * Part II - Hiipack Advanced
     * [Hosts](Part II/hosts.md)
