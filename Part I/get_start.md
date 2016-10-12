@@ -43,10 +43,17 @@ hii start --port 9876 --open
 hii start -p 9876 -o -d
 ```
 
+如果要显示详细的错误信息，可以使用参数`-D`或者`--detail`:
+
+```
+hii start -p 9876 -o -D
+```
+
+
 ## 打包代码
 
 ```
-hii pack
+hii pac
 ```
 
 打包的代码，会根据配置文件，把文件打包到一起，但是不压缩混淆代码，打包的文件会添加版本号`@dev`。
@@ -77,7 +84,7 @@ hii sync
     "server": "192.168.100.200", 
     "path": "/path/to/your/project/", 
     "exclude": [
-        ".git", ".DS_Store", "node_modules", "prd", "loc", "dll"
+        ".git", ".DS_Store", "node_modules"
     ]
 }
 ```
@@ -94,7 +101,7 @@ hii sync
 > 
 > 1. 启动代理服务器后，建议同时打开浏览器窗口（添加参数: `-o`或者`--open`\)
 > 
-> 2.  打开的浏览器窗口会自动配置好代理
+> 2. 打开的浏览器窗口会自动配置好代理
 > 
 > 3. 如果不打开浏览器，需要自己配置代理
 
