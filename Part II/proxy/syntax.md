@@ -4,17 +4,23 @@
 ### domain### location### 命令### 注释
 ```
 
+## 变量
+
+```
+$var_name
+```
+
 ## domain
 
 \`domain\` 用来指定一个域名，这个域名的所有配置都在 \`domain\` 块中。
 
 ```bash
-# 直接使用域名
+## 直接使用域名
 some.example.com => {
     # ...
 }
 
-# 或者使用变量
+## 或者使用变量
 $domain => {
     # ...
 }
@@ -27,18 +33,36 @@ $domain => {
 
 
 ```bash
-# 直接使用域名
-some.example.com => {
+## 目录
+location /some/path/ {
     # ...
 }
 
-# 或者使用变量
-$domain => {
+## 具体文件
+location /some/file.htm {
     # ...
 }
+
+## 正则表达式
+
+location ~ /^\/some\/(path|path1)\/.*/ {
+    # ...
+}
+
+## 变量
+
+location $some/$path {
+    # ...
+} 
 ```
 
 ## 命令
+
+命令用于设置一些变量，或者对`request`/`response`做一些操作。
+
+```
+# 语法: 命令 参数1 参数2 ... 参数N
+```
 
 ## 注释
 
