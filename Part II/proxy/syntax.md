@@ -22,7 +22,21 @@ $domain => {
 
 ## location
 
+\`location\` 用来指定域名中的一个具体的路径，这个路径的所有配置都在 \`location\` 块中。
 
+
+
+```bash
+# 直接使用域名
+some.example.com => {
+    # ...
+}
+
+# 或者使用变量
+$domain => {
+    # ...
+}
+```
 
 ## 命令
 
