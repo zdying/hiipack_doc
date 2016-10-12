@@ -6,6 +6,8 @@
 
 ## domain
 
+domain
+
 ```bash
 # 直接使用域名
 some.example.com => {
