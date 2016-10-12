@@ -102,10 +102,21 @@ location $some/$path {
 
 命令用于设置一些变量，或者对`request`/`response`做一些操作。
 
+#### 语法
+
 ```bash
-## 语法: 命令 参数1 参数2 ... 参数N
+命令 参数1 参数2 ... 参数N
 ```
 
+#### 例子
+
+```bash
+# 设置代理时的头部
+proxy_set_header Host some.example.com;
+
+# 设置response的cookie
+set_cookie UserID some_user_id;
+```
 
 
 
