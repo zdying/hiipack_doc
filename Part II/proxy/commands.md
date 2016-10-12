@@ -170,12 +170,13 @@ _参数_：
 
 ```bash
 key：Cookie名称
+value：Cookie值
 ```
 
 _例子_：
 
 ```bash
-set_cookie SESSION_ID;
+set_cookie SESSION_ID 2BF36A09CB35FD71E;
 ```
 
 
