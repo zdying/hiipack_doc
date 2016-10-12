@@ -31,7 +31,7 @@ proxy_set_header Host some.example.com
 
 参数：
 
-```
+```bash
 key: 要删除的字段名称
 ```
 
