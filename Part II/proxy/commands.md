@@ -4,11 +4,39 @@
 
 ## hiipack 支持的指令
 
-### 代理请求相关
+### 全局指令
+
+全局指令，用来在全局作用域中做一些配置。
+
+#### set
+
+作用：定义变量
+
+参数：
+
+```bash
+key：变量名称
+value：值
+```
+
+例子：
+
+```bash
+set $server hiipack;
+```
+
+
+
+
+
+### 代理请求相关指令
 
 代理请求相关的指令，用于操作代理服务向目标服务器发送请求的`Request`对象。
 
-#### proxy\_set\_header
+
+
+
+#### proxy_set_header
 
 作用：设置请求头部字段
 
@@ -25,7 +53,11 @@ value：字段值
 proxy_set_header Host some.example.com
 ```
 
-#### proxy\_hide\_header
+
+
+
+
+#### proxy_hide_header
 
 作用：删除请求头部字段
 
@@ -41,7 +73,10 @@ key: 要删除的字段名称
 proxy_set_header Host some.example.com
 ```
 
-#### proxy\_set\_cookie
+
+
+
+#### proxy_set_cookie
 
 作用：设置请求Cookie
 
@@ -57,6 +92,10 @@ value：Cookie值
 ```bash
 proxy_set_cookie from hiipack;
 ```
+
+
+
+
 
 #### proxy_hide_cookie
 
@@ -77,7 +116,7 @@ proxy_hide_cookie from;
 
 
 
-### 代理响应相关
+### 代理响应相关指令
 
 代理响应相关的指令用于配置代理服务器响应浏览器的`Response`对象。
 
@@ -98,13 +137,13 @@ value：Header字段的值
 例子：
 
 ```bash
-hide_header Server;
+set_header SERVER HIIPACK;
 ```
 
 
 
 
-#### hide\_header
+#### hide_header
 
 作用：删除Header字段
 
@@ -123,8 +162,25 @@ hide_header Server;
 
 
 
+#### set_cookie
 
-#### hide\_cookie
+作用：设置Cookie字段
+
+参数：
+
+```bash
+key：Cookie名称
+```
+
+例子：
+
+```bash
+set_cookie SESSION_ID;
+```
+
+
+
+#### hide_cookie
 
 作用：删除Cookie字段
 
@@ -137,8 +193,5 @@ key：Cookie名称
 例子：
 
 ```bash
-hide_cookie Access-Control-Allow-Origin;
+hide_cookie SESSION_ID;
 ```
-
-'set\_header': function\(key, value\){ log.debug\('set\_header -', this, key, value\); this.response.headers\[key\] = value; }, 'set\_cookie': function\(key, value\){ log.debug\('set\_cookie -', this, key, value\); this.response.headers\['Set-Cookie'\] = key + '=' + value; }, proxy\_pass: function\(value\){ this.props.proxy = value; }, \/\/ global commands 'set': function\(key, value\){ this.props\[key\] = value; }};
-
