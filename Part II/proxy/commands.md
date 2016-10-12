@@ -58,7 +58,7 @@ value：Cookie值
 proxy_set_cookie from hiipack;
 ```
 
-#### proxy\_hide\_cookie
+#### proxy_hide_cookie
 
 作用：删除请求Cookie字段
 
