@@ -35,7 +35,9 @@
 
 这样会有一个问题就是，那些原本不需要走代理的地址，其实是没有必要通过 hiipack 代理的，这样增加了 hiipack 的负担，也影响了响应的速度。
 
-因此，hiipack 还提供了一种代理的方式：**_自动代理_**，有关自动代理的内容，可以参考：[Proxy-Auto-Conifg](https://en.wikipedia.org/wiki/Proxy_auto-config) 或者 [PAC（代理自动配置）](http://baike.baidu.com/item/PAC/16292100)。
+因此，hiipack 还提供了一种代理的方式：_**自动代理**_（有关自动代理的内容，可以参考：[Proxy-Auto-Conifg](https://en.wikipedia.org/wiki/Proxy_auto-config) 或者 [PAC（代理自动配置）](http://baike.baidu.com/item/PAC/16292100)）。
+
+有了自动代理，**只有用户配置的`hosts`中的域名和`rewrite`中的域名才会通过代理服务器**。
 
 要使用自动代理，可以在 hiipack 启动日志中找到代理文件的路径，比如下面最后一行中的地址：
 
