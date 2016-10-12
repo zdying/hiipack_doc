@@ -24,14 +24,14 @@ $domain => {
 
 ## 注释
 
-```
+```bash
 # 注释内容
 set var value; # 设置变量
 ```
 
 ## 完整的例子
 
-```
+```bash
 ## url rewrite rules
 # page.example.com => hii.com;
 ## json.example.com => 127.0.0.1:8800;
