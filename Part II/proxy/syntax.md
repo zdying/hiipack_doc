@@ -1,6 +1,27 @@
 # 配置语法
 
 ```
+### domain### location### 命令### 注释
+```
+
+## domain
+
+
+
+## location
+
+## 命令
+
+## 注释
+
+```
+# 注释内容
+set var value; # 设置变量
+```
+
+## 完整的例子
+
+```
 ## url rewrite rules
 # page.example.com => hii.com;
 ## json.example.com => 127.0.0.1:8800;
