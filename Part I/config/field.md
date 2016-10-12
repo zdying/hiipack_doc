@@ -21,7 +21,7 @@
 
 具体使用例子：
 
-```javascript
+```js
 // hii.config.js
 module.exports = {
     /**
@@ -104,7 +104,7 @@ module.exports = {
 
 具体使用例子:
 
-```javascript
+```js
 // hii.config.js
 module.exports = {
     //...
@@ -154,3 +154,4 @@ module.exports = {
     }
 }
 ```
+
