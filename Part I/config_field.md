@@ -34,7 +34,6 @@
 
 具体使用例子:
 
-```
+// hii.config.js module.exports = { //... extend: { module: { loaders: [{ test: /\.(mustache|html)$/, loader: 'mustache' }, { 'markdown-loader': function(markdownLoader, markdownLoaderPath) { return { test: /\.(markdown|md)$/, loader: 'html!markdown' } } 'other-loader': { test: /\.md$/, loader: 'html!ohter' } }] }, plugins: [ function() { console.log('custom plugin 1'); }, { 'date-format': function(dateFormat, pkgPath) { console.log('callback2: data-format,', dateFormat, pkgPath); return function() { console.log('custom plugin 2, date =>', dateFormat('yyyy-MM/dd hh||mm//ss.SSS', new Date())); } }, 'underscore float-math': function(_, math, _path, mathPath) { console.log('callback3: data-utils,', _, math, _path, mathPath); return function() { console.log('custom plugin 3', 0.3 - 0.2, math.sub(0.3, 0.2), _.isEmpty([1, 2, 3]), _path, mathPath); } } }], }, vue: { loaders: { js: 'babel-loader?presets[]=' + __hiipack__.resolve('babel-preset-es2015-loose') + '&plugins[]=' + __hiipack__.resolve('babel-plugin-transform-runtime') + '&comments=false' } } }
 
-```
 
