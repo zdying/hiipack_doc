@@ -6,8 +6,6 @@
 
 ## domain
 
-
-
 ## location
 
 ## 命令
