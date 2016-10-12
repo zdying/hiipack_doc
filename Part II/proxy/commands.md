@@ -114,7 +114,7 @@ hide_cookie Access-Control-Allow-Origin;
 
 ```bash
 
-hide_cookie Server;
+hide_header Server;
 
 ```
 
