@@ -125,7 +125,7 @@ hide_header Server;
 
 参数：
 
-```
+```bash
 key：Cookie名称
 ```
 
