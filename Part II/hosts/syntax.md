@@ -1,4 +1,4 @@
-# 语法
+# 语法 {#syntax}
 
 语法跟系统`hosts`语法基本一致，唯一不一样的地方就是，hiipack的`hosts`支持**IP+端口**，语法如下:
 
@@ -6,7 +6,7 @@
 IP[:端口] 域名1 域名2 域名3 ... 域名N
 ```
 
-# 例子
+# 例子 {#example}
 
 ```bash
 # custom hosts with port :)
