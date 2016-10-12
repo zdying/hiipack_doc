@@ -6,6 +6,8 @@
 IP[:端口] 域名1 域名2 域名3 ... 域名N
 ```
 
+# 例子
+
 ```
 # custom hosts with port :)
 
