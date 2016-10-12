@@ -6,15 +6,15 @@
 
 ## domain
 
-```
+```bash
+# 直接使用域名
+some.example.com => {
+    # ...
+}
+
+# 或者使用变量
 $domain => {
-   proxy_pass http://127.0.0.1:8800/news/src/mock/;
-   set $id 1234;
-   set $mock_user user_$id;
-   
-   set_header Host $domain;
-   set_header UserID $mock_user;
-   set_header Access-Control-Allow-Origin *;
+    # ...
 }
 ```
 
