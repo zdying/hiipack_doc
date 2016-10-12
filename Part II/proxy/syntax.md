@@ -113,6 +113,8 @@ location $some/$path {
 set var value; # 设置变量
 ```
 
+
+
 ## 完整的例子
 
 ```bash
