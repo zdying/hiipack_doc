@@ -234,7 +234,7 @@ api.qunar.com => {
         set_header Set-Cookie userID 200908204140;
     }
 
-    location ~ /(usercenter|userinfo)/ {
+    location ~ /\/(usercenter|userinfo)/ {
         set $cookie login=true;expires=20180808;
         proxy_pass http://127.0.0.1:3008/info/;
         set_cookie userID 200908204140;
