@@ -32,7 +32,7 @@ set $var_name value
 #### 语法：
 
 ```bash
-[host|variable] => {
+[域名|变量] => {
     # ...
 }
 ```
@@ -62,7 +62,7 @@ $domain => {
 #### 语法
 
 ```bash
-location [folder|file|regexp|variable] {
+location [目录|文件|正则表达式|变量] {
     # ...
 }
 ```
@@ -102,7 +102,7 @@ location $some/$path {
 
 命令用于设置一些变量，或者对`request`/`response`做一些操作。
 
-```
+```bash
 ## 语法: 命令 参数1 参数2 ... 参数N
 ```
 
