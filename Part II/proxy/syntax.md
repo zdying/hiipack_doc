@@ -1,6 +1,6 @@
-# 配置语法
+# 配置语法 {#configsyntax}
 
-## 变量
+## 变量 {#variable}
 
 #### 语法
 
@@ -18,10 +18,7 @@ $var_name
 set $var_name value
 ```
 
-
-
-
-## domain
+## domain {#domain}
 
 `domain` 用来指定一个域名，这个域名的所有配置都在 `domain` 块中。
 
@@ -47,16 +44,11 @@ $domain => {
 }
 ```
 
-
-
-
-
-## location
+## location {#location}
 
 `location` 用来指定域名中的一个具体的路径，这个路径的所有配置都在 `location` 块中。
 
-注意:**`location`必须位于`domain`块中**。
-
+注意:`location`**必须位于**`domain`**块中**。
 
 #### 语法
 
@@ -92,14 +84,9 @@ location $some/$path {
 } 
 ```
 
+## 命令 {#command}
 
-
-
-
-
-## 命令
-
-命令用于设置一些变量，或者对`request`/`response`做一些操作。
+命令用于设置一些变量，或者对`request`\/`response`做一些操作。
 
 #### 语法
 
@@ -117,10 +104,7 @@ proxy_set_header Host some.example.com;
 set_cookie UserID some_user_id;
 ```
 
-
-
-
-## 注释
+## 注释 {#comment}
 
 用来注释某些不需要的内容，**只支持单行注释**。
 
@@ -136,8 +120,6 @@ set_cookie UserID some_user_id;
 # 注释内容
 set var value; # 设置变量
 ```
-
-
 
 #### 简写语法
 
@@ -155,11 +137,7 @@ set var value; # 设置变量
 json.example.com => 127.0.0.1:8800;
 ```
 
-
-
-
-
-## 完整的例子
+## 完整的例子 {#example}
 
 ```bash
 ## url rewrite rules
