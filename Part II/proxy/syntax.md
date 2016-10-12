@@ -129,6 +129,8 @@ set_cookie UserID some_user_id;
 # 注释内容
 ```
 
+#### 例子
+
 ```bash
 # 注释内容
 set var value; # 设置变量
