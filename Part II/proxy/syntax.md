@@ -32,7 +32,7 @@ set $var_name value
 #### 语法：
 
 ```bash
-location [folder|file|regexp|variable] {
+domain_host => {
     # ...
 }
 ```
