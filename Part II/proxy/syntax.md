@@ -32,7 +32,7 @@ set $var_name value
 #### 语法：
 
 ```bash
-domain_host => {
+[host|variable] => {
     # ...
 }
 ```
