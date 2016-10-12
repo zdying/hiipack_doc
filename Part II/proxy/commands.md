@@ -92,7 +92,7 @@ proxy_hide_cookie from;
 
 参数：
 
- key：Cookie名称
+    key：Cookie名称
 
 例子：
 
@@ -102,20 +102,37 @@ hide_cookie Access-Control-Allow-Origin;
 
 
 
+#### set_header
+
+作用：添加Header字段
+
+参数：
+
+    key：Header字段名称
+    value：Header字段的值
+
+例子：
+
+```bash
+hide_header Server;
+```
+
+
+
+
+
 #### hide_header
 
 作用：删除Header字段
 
 参数：
 
- key：Header字段名称
+    key：Header字段名称
 
 例子：
 
 ```bash
-
 hide_header Server;
-
 ```
 
-'hide_header': function(key, value){ log.debug('hide_header -', this, key, value); delete this.response.headers[key]; }, 'set_header': function(key, value){ log.debug('set_header -', this, key, value); this.response.headers[key] = value; }, 'set_cookie': function(key, value){ log.debug('set_cookie -', this, key, value); this.response.headers['Set-Cookie'] = key + '=' + value; }, proxy_pass: function(value){ this.props.proxy = value; }, // global commands 'set': function(key, value){ this.props[key] = value; }};
+'set_header': function(key, value){ log.debug('set_header -', this, key, value); this.response.headers[key] = value; }, 'set_cookie': function(key, value){ log.debug('set_cookie -', this, key, value); this.response.headers['Set-Cookie'] = key + '=' + value; }, proxy_pass: function(value){ this.props.proxy = value; }, // global commands 'set': function(key, value){ this.props[key] = value; }};
