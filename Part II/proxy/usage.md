@@ -8,9 +8,9 @@
 2. **启动本地服务时添加参数: **`--proxy --open`** 或者 **`-xo`
 
 > 提示:
-> 
+
 > 1. `-x`或者`--proxy` ==&gt; 启动代理服务
-> 
+
 > 2. `-o`或者`--open` ==&gt; 打开浏览器窗口，默认Chrome
 
 自动打开浏览器窗口的好处是：
@@ -37,7 +37,7 @@
 
 这样会有一个问题就是，那些原本不需要走代理的地址，其实是没有必要通过 hiipack 代理的，这样增加了 hiipack 的负担，也影响了响应的速度。
 
-因此，hiipack 还提供了一种代理的方式：***自动代理***，有关自动代理的内容，可以参考：[Proxy-Auto-Conifg](https://en.wikipedia.org/wiki/Proxy_auto-config) 或者 [PAC（代理自动配置）](http://baike.baidu.com/item/PAC/16292100)。
+因此，hiipack 还提供了一种代理的方式：_**自动代理**_，有关自动代理的内容，可以参考：[Proxy-Auto-Conifg](https://en.wikipedia.org/wiki/Proxy_auto-config) 或者 [PAC（代理自动配置）](http://baike.baidu.com/item/PAC/16292100)。
 
 要使用自动代理，可以在 hiipack 启动日志中找到代理文件的路径，比如下面最后一行中的地址：
 
