@@ -9,8 +9,8 @@
         * [配置文件](Part I/config/file.md)
         * [配置字段](Part I/config/field.md)
 * Part II - Hiipack Advanced
-    * [Hosts](Part II/hosts.md)
-        * [语法](Part II/hosts_syntax.md)
+    * [Hosts](Part II/hosts/README.md)
+        * [语法](Part II/hosts/syntax.md)
     * [代理](Part II/proxy.md)
         * [配置文件](Part II/config_file.md)
         * [语法](Part II/syntax.md)
