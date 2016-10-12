@@ -229,6 +229,7 @@ api.qunar.com => {
     set $node_server 127.0.0.1:3008;
     set $order order;
     set $cookie1 login=true;expires=20160909;
+
     location /$flight/$order/detail {
         proxy_pass http://$node_server/user/?domain=$domain;
         set_header Set-Cookie userID 200908204140;
