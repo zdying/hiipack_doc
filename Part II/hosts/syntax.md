@@ -8,7 +8,7 @@ IP[:端口] 域名1 域名2 域名3 ... 域名N
 
 # 例子
 
-```
+```bash
 # custom hosts with port :)
 
 # comment
@@ -21,3 +21,4 @@ IP[:端口] 域名1 域名2 域名3 ... 域名N
 127.0.0.1 example.com example.com.cn
 
 ```
+
