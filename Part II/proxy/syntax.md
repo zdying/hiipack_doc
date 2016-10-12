@@ -6,7 +6,7 @@
 
 ## domain
 
-domain
+\`domain\` 用来指定一个域名，这个域名的所有配置都在 \`domain\` 块中。
 
 ```bash
 # 直接使用域名
@@ -21,6 +21,8 @@ $domain => {
 ```
 
 ## location
+
+
 
 ## 命令
 
