@@ -56,7 +56,6 @@ value：Cookie值
 
 ```bash
 proxy_set_cookie from hiipack;
-
 ```
 
 #### proxy\_hide\_cookie
@@ -65,7 +64,7 @@ proxy_set_cookie from hiipack;
 
 参数：
 
-```
+```bash
 key：Cookie名称
 ```
 
