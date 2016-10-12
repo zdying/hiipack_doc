@@ -57,7 +57,7 @@ $domain => {
 
 ## location
 
-\`location\` 用来指定域名中的一个具体的路径，这个路径的所有配置都在 \`location\` 块中。
+`location` 用来指定域名中的一个具体的路径，这个路径的所有配置都在 `location` 块中。
 
 #### 语法
 
