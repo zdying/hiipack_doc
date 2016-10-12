@@ -21,6 +21,76 @@
 
 具体使用例子：
 
+```javascript
+// hii.config.js
+module.exports = {
+    /**
+     * 需要单独打包的第三方库
+     * 例如: {lib: ['react', 'react-dom']}
+     * 会把'react'和'react-dom'打包到lib.js
+     */
+    library: {
+        lib: ['react', 'react-dom', 'redux', 'react-redux', 'react-cookie']
+    },
+
+    /**
+     * 配置babel相关东西
+     */
+    babel: {
+        plugins: null,
+        presets: ['babel-preset-react', 'babel-preset-es2015-loose'],
+        include: null,
+        exclude: null
+    }
+
+    /**
+     * 业务代码入口
+     */
+    entry: {
+        home : "src/home/index",
+        detail : "src/detail/index"
+    },
+
+    /**
+     * 别名, 避免在代码中出现很长的相对路径
+     */
+    alias: {
+        'root': 'src',
+        'list': 'src/list',
+        'lib': 'src/lib',
+        'detail': 'src/detail'
+    },
+
+    /**
+     * 不需要处理的静态文件, 直接复制, statics可以是数组，
+     * 下面的配置会把`src/static`下面的所有文件，直接复制到： `最终编译后根目录/static`下面
+     */
+    statics: {
+        from: 'src/static',
+        to: 'static'
+    }
+
+    /**
+     * 数组
+     */
+    /*
+    statics: [
+        { from: 'src/static', to: 'static' },
+        { from: 'src/static1', to: 'static1' }
+    ]
+    */,
+
+    /**
+     * 自动化测试框架配置
+     */
+    autoTest: {
+        framework: 'mocha',
+        // assertion: 'expect'
+        assertion: ['expect', 'assert']
+    }
+};
+```
+
 ## 扩展配置
 
 除了上面的基本配置之外，`hiipack`还支持一些额外的配置来实现一些其他的特性，比如`loaders`可以添加处理其他类型文件的能力，而不需要更新`hiipack`本身。
@@ -34,5 +104,53 @@
 
 具体使用例子:
 
+```javascript
+// hii.config.js
+module.exports = {
+    //...
+    extend: {
+        module: {
+            loaders: [{
+                test: /\.(mustache|html)$/,
+                loader: 'mustache'
+            },
+            {
+                'markdown-loader': function(markdownLoader, markdownLoaderPath) {
+                    return {
+                        test: /\.(markdown|md)$/,
+                        loader: 'html!markdown'
+                    }
+                }
+                'other-loader': {
+                    test: /\.md$/,
+                    loader: 'html!ohter'
+                }
+            }]
+        },
+        plugins: [
 
-
+        function() {
+            console.log('custom plugin 1');
+        },
+        {
+            'date-format': function(dateFormat, pkgPath) {
+                console.log('callback2: data-format,', dateFormat, pkgPath);
+                return function() {
+                    console.log('custom plugin 2, date =>', dateFormat('yyyy-MM/dd hh||mm//ss.SSS', new Date()));
+                }
+            },
+            'underscore float-math': function(_, math, _path, mathPath) {
+                console.log('callback3: data-utils,', _, math, _path, mathPath);
+                return function() {
+                    console.log('custom plugin 3', 0.3 - 0.2, math.sub(0.3, 0.2), _.isEmpty([1, 2, 3]), _path, mathPath);
+                }
+            }
+        }],
+    },
+    vue: {
+        loaders: {
+            js: 'babel-loader?presets[]=' + __hiipack__.resolve('babel-preset-es2015-loose') + '&plugins[]=' + __hiipack__.resolve('babel-plugin-transform-runtime') + '&comments=false'
+        }
+    }
+}
+```
