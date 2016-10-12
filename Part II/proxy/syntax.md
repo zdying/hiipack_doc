@@ -61,6 +61,7 @@ $domain => {
 
 注意:**`location`必须位于`domain`块中**。
 
+
 #### 语法
 
 ```bash
