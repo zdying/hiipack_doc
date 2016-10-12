@@ -19,7 +19,7 @@ npm install -g hiipack@beta # beta版本
 > 
 > 1. 国内用户推荐使用淘宝的NPM源，安装速度比较快
 > 
-> 2. hiipack 默认支持css\/less\/sass，所以依赖 node-sass, 安装 node-sass 需要从 github 下载文件，所以比较慢，推荐使用淘宝 node-sass 镜像
+> 2. hiipack 默认支持css/less/sass，所以依赖 node-sass, 安装 node-sass 需要从 github 下载文件，所以比较慢，推荐使用淘宝 node-sass 镜像
 > 
 > 3. 为了解决以上两个问题，可以使用下面的代码安装
 
