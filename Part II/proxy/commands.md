@@ -79,7 +79,41 @@ proxy_hide_cookie from;
 
 代理响应相关的指令用于配置代理服务器响应浏览器的`Response`对象。
 
+#### set\_header
 
+作用：添加Header字段
+
+参数：
+
+```bash
+key：Header字段名称
+value：Header字段的值
+```
+
+例子：
+
+```bash
+hide_header Server;
+```
+
+
+
+
+#### hide\_header
+
+作用：删除Header字段
+
+参数：
+
+```
+key：Header字段名称
+```
+
+例子：
+
+```bash
+hide_header Server;
+```
 
 
 
@@ -99,39 +133,6 @@ key：Cookie名称
 
 ```bash
 hide_cookie Access-Control-Allow-Origin;
-```
-
-#### set\_header
-
-作用：添加Header字段
-
-参数：
-
-```
-key：Header字段名称
-value：Header字段的值
-```
-
-例子：
-
-```bash
-hide_header Server;
-```
-
-#### hide\_header
-
-作用：删除Header字段
-
-参数：
-
-```
-key：Header字段名称
-```
-
-例子：
-
-```bash
-hide_header Server;
 ```
 
 'set\_header': function\(key, value\){ log.debug\('set\_header -', this, key, value\); this.response.headers\[key\] = value; }, 'set\_cookie': function\(key, value\){ log.debug\('set\_cookie -', this, key, value\); this.response.headers\['Set-Cookie'\] = key + '=' + value; }, proxy\_pass: function\(value\){ this.props.proxy = value; }, \/\/ global commands 'set': function\(key, value\){ this.props\[key\] = value; }};
