@@ -1,6 +1,6 @@
-# 如何开始
+# 如何开始 {#get-start}
 
-## 初始化工程
+## 初始化工程 {#init-project}
 
 ```bash
 hii init <project-name>
@@ -15,7 +15,7 @@ hii init <project-name>
 * `normal`: 普通项目， **默认为**`normal`**\*** 
 * `vue`: Vue.js项目\(**hiipack本身不支持vue模板编译，但是简单配置就可以了**\)
 
-## 启动本地服务
+## 启动本地服务 {#start-local-server}
 
 ```bash
 hii start
@@ -49,7 +49,7 @@ hii start -p 9876 -o -d
 hii start -p 9876 -o -D
 ```
 
-## 打包代码
+## 打包代码 {#pack}
 
 ```bash
 hii pac
@@ -59,7 +59,7 @@ hii pac
 
 打包后的代码位于`project/dev/`中。
 
-## 打包压缩代码
+## 打包压缩代码 {#min}
 
 ```bash
 hii min
@@ -69,7 +69,7 @@ hii min
 
 打包后的代码位于`project/prd/`中。
 
-## 上传代码到远程服务器
+## 上传代码到远程服务器 {#sync}
 
 ```
 hii sync
@@ -88,7 +88,7 @@ hii sync
 }
 ```
 
-## 启动代理服务
+## 启动代理服务 {#proxy-server}
 
 如果要使用代理服务功能， 启动时添加参数`-x`或者`--proxy`, 默认端口为`4936`\(4 \* 9 = 36\) :\)。
 
