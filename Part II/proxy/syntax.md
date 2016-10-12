@@ -15,7 +15,11 @@ $变量名
 #### 例子
 
 ```
+# 使用变量
 $var_name
+
+# 定义变量
+set $var_name value
 ```
 
 
