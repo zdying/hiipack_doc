@@ -2,7 +2,7 @@
 
 ## 初始化工程
 
-```
+```bash
 hii init <project-name>
 ```
 
@@ -17,7 +17,7 @@ hii init <project-name>
 
 ## 启动本地服务
 
-```
+```bash
 hii start
 ```
 
@@ -25,13 +25,13 @@ hii start
 
 默认端口是`8800`, 如果要自己指定端口，可以使用参数`-p <port>`或者`--port <port>`:
 
-```
+```bash
 hii start -p 9876
 ```
 
 如果要打开浏览器，可以使用参数`-o`或者`--open`:
 
-```
+```bash
 hii start -p 9876 -o
 #或者
 hii start --port 9876 --open
@@ -39,20 +39,19 @@ hii start --port 9876 --open
 
 默认情况下只显示`access`和`info`日志，**不会显示调试信息**，如果要显示可以使用参数`-d`或者`--debug`:
 
-```
+```bash
 hii start -p 9876 -o -d
 ```
 
 如果要显示详细的错误信息，可以使用参数`-D`或者`--detail`:
 
-```
+```bash
 hii start -p 9876 -o -D
 ```
 
-
 ## 打包代码
 
-```
+```bash
 hii pac
 ```
 
@@ -62,7 +61,7 @@ hii pac
 
 ## 打包压缩代码
 
-```
+```bash
 hii min
 ```
 
