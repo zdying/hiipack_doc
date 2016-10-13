@@ -79,7 +79,7 @@ _例子_：
 proxy_set_cookie from hiipack;
 ```
 
-#### proxy\_hide\_cookie {#proxy-hide-cookie}
+#### proxy_hide_cookie {#proxy-hide-cookie}
 
 _作用_：删除请求Cookie字段
 
