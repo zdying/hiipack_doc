@@ -29,6 +29,26 @@ set $server hiipack;
 
 代理请求相关的指令，用于操作代理服务向目标服务器发送请求的`Request`对象。
 
+
+
+#### proxy\_pass {#proxy-pass}
+
+_作用_：设置请求转发的目标地址
+
+_参数_：
+
+```bash
+url：要转发的地址
+```
+
+_例子_：
+
+```bash
+proxy_pass http://some.example.com/some/path/;
+```
+
+
+
 #### proxy\_set\_header {#proxy-set-header}
 
 _作用_：设置请求头部字段
@@ -79,7 +99,7 @@ _例子_：
 proxy_set_cookie from hiipack;
 ```
 
-#### proxy_hide_cookie {#proxy-hide-cookie}
+#### proxy\_hide\_cookie {#proxy-hide-cookie}
 
 _作用_：删除请求Cookie字段
 
