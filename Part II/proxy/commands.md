@@ -27,9 +27,7 @@ set $server hiipack;
 
 ### 代理请求相关指令 {#res-scope}
 
-代理请求相关的指令，用于操作代理服务向目标服务器发送请求的`Request`对象。
-
-
+> 代理请求相关的指令，用于操作代理服务向目标服务器发送请求的`Request`对象。
 
 #### proxy\_pass {#proxy-pass}
 
@@ -46,8 +44,6 @@ _例子_：
 ```bash
 proxy_pass http://some.example.com/some/path/;
 ```
-
-
 
 #### proxy\_set\_header {#proxy-set-header}
 
@@ -117,7 +113,7 @@ proxy_hide_cookie from;
 
 ### 代理响应相关指令 {#res-scope}
 
-代理响应相关的指令用于配置代理服务器响应浏览器的`Response`对象。
+> 代理响应相关的指令用于配置代理服务器响应浏览器的`Response`对象。
 
 #### set\_header {#set-header}
 
