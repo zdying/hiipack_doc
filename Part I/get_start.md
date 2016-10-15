@@ -8,11 +8,11 @@ hii init <project-name>
 
 `hii init project-name` 会默认初始化一个项目，可以通过参数`-t`或者`--type`指定项目类型，参数可选值：
 
-* `empty`: 空项目 
+* `empty`: 空项目
 * `es6`: 使用ECMAScript 2015的项目
 * `react`: 使用`react`的项目
 * `react-redux`: 使用`react`和`redux`的项目
-* `normal`: 普通项目， **默认为**`normal`**\*** 
+* `normal`: 普通项目， **默认为**`normal`**\***
 * `vue`: Vue.js项目\(**hiipack本身不支持vue模板编译，但是简单配置就可以了**\)
 
 ## 启动本地服务 {#start-local-server}
@@ -52,7 +52,7 @@ hii start -p 9876 -o -D
 ## 打包代码 {#pack}
 
 ```bash
-hii pac
+hii pack
 ```
 
 打包的代码，会根据配置文件，把文件打包到一起，但是不压缩混淆代码，打包的文件会添加版本号`@dev`。
@@ -78,10 +78,10 @@ hii sync
 把当前目录的代码上传到服务器，要上传的内容和服务器用户、IP、目录等配置，在项目根目录的`dev.json`中, 配置例子:
 
 ```json
-{ 
-    "source": "./", 
-    "server": "192.168.100.200", 
-    "path": "/path/to/your/project/", 
+{
+    "source": "./",
+    "server": "192.168.100.200",
+    "path": "/path/to/your/project/",
     "exclude": [
         ".git", ".DS_Store", "node_modules"
     ]
@@ -97,10 +97,9 @@ hii sync
 启动代理服务后，可以省略本地配置`hosts`和启动`Nginx`服务。
 
 > 提示：
-> 
+>
 > 1. 启动代理服务器后，建议同时打开浏览器窗口（添加参数: `-o`或者`--open`\)
-> 
+>
 > 2. 打开的浏览器窗口会自动配置好代理
-> 
+>
 > 3. 如果不打开浏览器，需要自己配置代理
-
