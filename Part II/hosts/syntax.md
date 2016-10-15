@@ -17,8 +17,6 @@ IP[:端口] 域名1 域名2 域名3 ... 域名N
 # 127.0.0.1:8800 hiipack.com hii.com
 
 127.0.0.1:8800 hiipack.com hii.com
-
 127.0.0.1 example.com example.com.cn
-
 ```
 
