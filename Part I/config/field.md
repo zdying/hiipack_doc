@@ -157,14 +157,15 @@ module.exports = {
 hiipack已经为用户自动添加了autoprefixer插件，以此来解决css前缀的补全问题。但是在不同环境上运行的css代码需要的补全前缀的需求不同。所以如果您需要自定义autoprefixer的 [补全级别](https://github.com/ai/browserslist#queries) ，可以参考下面示例配置：
 
 ```js
-
 // hii.config.js
 module.exports = {
     //...
     extend: {
-        postcss:[require('autoprefixer')({
-            browsers:['last 2 versions']
-        })]
+        postcss:[
+            require('autoprefixer')({
+                browsers:['last 2 versions']
+            })
+        ]
     }
 }
 ```
@@ -173,9 +174,11 @@ module.exports = {
 ```js
 // hii.config.js
 module.exports = {
-    postcss: [require('autoprefixer')({
-        browsers:['last 2 versions']
-    })]
+    postcss: [
+        require('autoprefixer')({
+            browsers:['last 2 versions']
+        })
+    ]
 }
 ```
 正如上文提到的，hiipack会将用户配置与内置配置进行合并。所以上面的两种方式都可以正确的配置autoprefixer插件。
