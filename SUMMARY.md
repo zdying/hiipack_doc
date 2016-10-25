@@ -8,6 +8,7 @@
     * [配置](Part I/config/README.md)
         * [配置文件](Part I/config/file.md)
         * [配置字段](Part I/config/field.md)
+        * [自定义插件\/loader](Part I/config/custom-plugins-loaders.md)
 * Part II - Hiipack Advanced
     * [Hosts](Part II/hosts/README.md)
         * [语法](Part II/hosts/syntax.md)
