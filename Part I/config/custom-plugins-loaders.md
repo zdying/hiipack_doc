@@ -12,7 +12,7 @@ Hiipack 支持自定义`插件`和`loader`自动安装，用户可以不需要�
 
 2. 安装到临时目录的第三方依赖，可以在多个项目中共享，不用重复安装。
 
-3. 可以充分共享 Hiipack **默认已经安装的一些模块** 和 **全局的模块**，比如 Hiipack 依赖了`less`, 用户如果也需要`less`，可以直接使用 Hiipack 已经安装好的。
+3. 可以充分共享 Hiipack **_默认已经安装的一些模块_** 和 **_全局的模块_**，比如 Hiipack 依赖了`less`, 用户如果也需要`less`，可以直接使用 Hiipack 已经安装好的。
 
 
 当然，自动依赖也有一些不足之处。需要我们自己去克服。
@@ -21,12 +21,18 @@ Hiipack 支持自定义`插件`和`loader`自动安装，用户可以不需要�
 
 1. 版本号问题，如果某个项目需要依赖特定版本的某个第三方插件或者loader，而其他项目不兼容这个版本，需要其他的版本。这时候，Hiipack 也不知道怎么办了。
 
-1. 临时目录，可能会被定期清除，这样就会导致，可能多次安装，因为 Hiipack 解析到某个插件或者loader的时候，临时目录没有了，就会自动安装。
+2. 临时目录，可能会被定期清除，这样就会导致，可能多次安装，因为 Hiipack 解析到某个插件或者loader的时候，临时目录没有了，就会自动安装。
 
 
 #### 怎么解决上面的不足？
 
-Hiipack 提供了一个全局的方法`__hiipack__.resolve(module_name)`或者`__hii__.resolve(module_name)`，调用这个方法可以获取到已经安装的
+Hiipack 提供了一个全局的方法`__hiipack__.resolve(module_name)`或者`__hii__.resolve(module_name)`，调用这个方法，Hiipack 会按照如下顺序查找已经安装的模块：
+
+1. Hiipack 根目录的`node_modules`
+
+2. Node.js 全局模块目录（`npm root -g`）
+
+3. Hiipack 临时目录
 
 
 
