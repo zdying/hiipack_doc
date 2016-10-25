@@ -21,22 +21,49 @@ npm install mustache mustache-loader --save-dev`
 
 2. 配置`webpack`
 ```javascript
-loaders: [{
-    test: /\.mustache$/,
-    loader: "mustache-loader"
-}]
+{
+    // ...
+    loaders: [{
+        test: /\.mustache$/,
+        loader: "mustache-loader"
+    }]
+}
 ``` 
 
 使用 Hiipack 后，可以省略第一步，直接配置一下就可以，但是配置跟`webpack`的略有不同（需要配置到`extend`字段下）。
 
 1. 配置 Hiipack
+
 ```javascript
 {
+    // ...
     extend: {
-        
+        loaders: [{
+             test: /\.mustache$/,
+             loader: "mustache-loader"
+        }]
     }
 }
 ```
+
+有了上面的配置，**第一次**启动本地开发服务，或者`pack/min`的时候，就能看到 Hiipack 自动安装的日志了：
+
+```bash
+[info] package - installing loaders mustache mustache-loader ...
+[info] package - finding peerDependencies for mustache
+[info] package - finding peerDependencies for mustache-loader
+[info] package - mustache-loader peerDependencies hogan.js,webpack
+```
+
+以后就不会看到这样的日志了。
+
+> **注意**：
+
+> 1. 因为我们并没有在工程中安装`mustache-loader`，最终Hiipack会把`"muatache-loader"`替换成绝对路径
+
+> 2. `mustache-loader`有`peerDependenices`: `mustache`，Hiipack会自动安装。如果用户手动安装到工程中，需要单独安装。
+
+> 3. 如果缓存目录被清空了，再次运行的时候会 Hiipack 重新安装。
 
 
 
