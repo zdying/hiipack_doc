@@ -22,11 +22,11 @@ npm install mustache mustache-loader --save-dev`
 2. 配置`webpack`
 ```javascript
 {
-    // ...
-    loaders: [{
-        test: /\.mustache$/,
-        loader: "mustache-loader"
-    }]
+     // ...
+     loaders: [{
+         test: /\.mustache$/,
+         loader: "mustache-loader"
+     }]
 }
 ``` 
 
