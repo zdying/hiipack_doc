@@ -4,7 +4,7 @@
 
 由于时间、精力有限，难免存在诸多疏漏或者不到位的地方，还请谅解！
 
-[![webpack](https://img.shields.io/badge/hiipack-based%20on%20webpack-green.svg?style=flat)](https://webpack.github.io/)
+[![webpack](https://img.shields.io/badge/hiipack-%20based%20on%20webpack%20-green.svg?style=flat)](https://webpack.github.io/)
 [![NPM version](https://img.shields.io/npm/v/hiipack.svg?style=flat)](https://www.npmjs.org/package/hiipack)
 [![npm](https://img.shields.io/npm/dm/hiipack.svg)](https://www.npmjs.com/package/hiipack)
 [![Build Status](https://travis-ci.org/zdying/hiipack.svg?branch=1.0.4)](https://travis-ci.org/zdying/hiipack)
