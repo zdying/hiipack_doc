@@ -10,9 +10,10 @@
 [![Build Status](https://travis-ci.org/zdying/hiipack.svg?branch=1.0.4)](https://travis-ci.org/zdying/hiipack)
 
 
-[![GitHub followers](https://img.shields.io/github/followers/hiipack.svg?style=social&label=Follow)](https://github.com/zdying/hiipack)
-[![GitHub stars](https://img.shields.io/github/stars/badges/hiipack.svg?style=social&label=Star)](https://github.com/zdying/hiipack)
-[![GitHub forks](https://img.shields.io/github/forks/badges/hiipack.svg?style=social&label=Fork)](https://github.com/zdying/hiipack)
+[![GitHub forks](https://img.shields.io/github/forks/zdying/hiipack.svg?style=social&label=Fork)](https://github.com/zdying/hiipack)
+[![GitHub stars](https://img.shields.io/github/stars/zdying/hiipack.svg?style=social&label=Star)](https://github.com/zdying/hiipack)
+[![GitHub followers](https://img.shields.io/github/followers/zdying.svg?style=social&label=Follow)](https://github.com/zdying)
+
 
 
 > 注意: **目前文档还没有完成，正在拼命编写...**
