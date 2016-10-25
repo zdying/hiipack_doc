@@ -55,10 +55,10 @@ npm install mustache mustache-loader --save-dev`
      loaders: [{
          /**
           * 以这种"key:value"存在的配置，value 为 function
-          * hiipack 会先安装 key 中对应的模块，然后执行 value，并传入已经安装的模块
+          * hiipack 会先安装 key 中对应的模块，然后执行 value，并传入已经安装的模块以及模块的绝对路径
           * value 返回的对象，会作为最终的 loader 对象传递给 webpack
           */
-         "mustache mustache-loader": function(mustache, mustacheLoader){
+         "mustache mustache-loader": function(mustache, mustacheLoader, mustachePath, mustacheLoaderPath){
              // 这里还能做一些其他的操作，虽然对于loader来说，这里没啥可以操作的
              return {
                  test: /\.mustache$/,
