@@ -6,29 +6,30 @@
 
 Hiipack 支持自定义`插件`和`loader`自动安装，用户可以不需要手动安装到项目并设置`devDependencies`字段。当 Hiipack 解析配置文件时，发现自定义`插件`或者`loader`不存在的时候会自动安装所需的依赖到临时目录中。
 
-
-
 ### 使用例子
 
-Hiipack 默认不支持**`mustache`**模板，如果某个项目需要使用这个模板，怎么办呢？
+Hiipack 默认不支持`mustache`模板，如果某个项目需要使用这个模板，怎么办呢？
 
 如果在`webpack`中:
 
 1. 安装模块
-```bash
-npm install mustache mustache-loader --save-dev`
-```
+
+  ```bash
+  npm install mustache mustache-loader --save-dev`
+  ```
 
 2. 配置`webpack`
-```javascript
-{
-        // ...
-        loaders: [{
-test: /\.mustache$/,
-         loader: "mustache-loader"
-     }]
-}
-``` 
+
+  ```javascript
+  {
+       // ...
+       loaders: [{
+            test: /\.mustache$/,
+            loader: "mustache-loader"
+       }]
+  }
+  ```
+
 
 使用 Hiipack 后，可以省略第一步，直接配置一下就可以，但是配置跟`webpack`的略有不同（需要配置到`extend`字段下）。
 
@@ -72,8 +73,6 @@ test: /\.mustache$/,
 }
 ```
 
-
-
 有了上面的配置，**第一次**启动本地开发服务，或者`pack/min`的时候，就能看到 Hiipack 自动安装的日志了：
 
 ```bash
@@ -86,14 +85,12 @@ test: /\.mustache$/,
 以后就不会看到这样的日志了。
 
 > **注意**：
-
+> 
 > 1. 因为我们并没有在工程中安装`mustache-loader`，最终Hiipack会把`"muatache-loader"`替换成绝对路径
-
+> 
 > 2. `mustache-loader`有`peerDependenices`: `mustache`，Hiipack会自动安装。如果用户手动安装到工程中，需要单独安装。
-
+> 
 > 3. 如果缓存目录被清空了，再次运行的时候会 Hiipack 重新安装。
-
-
 
 #### 自动安装的好处 {#benefit}
 
@@ -101,7 +98,7 @@ test: /\.mustache$/,
 
 2. 安装到临时目录的第三方依赖，可以在多个项目中共享，不用重复安装。
 
-3. 可以充分共享 Hiipack _**默认已经安装的一些模块**_ 和 _**全局的模块**_，比如 Hiipack 依赖了`less`, 用户如果也需要`less`，可以直接使用 Hiipack 已经安装好的。
+3. 可以充分共享 Hiipack **_默认已经安装的一些模块_** 和 **_全局的模块_**，比如 Hiipack 依赖了`less`, 用户如果也需要`less`，可以直接使用 Hiipack 已经安装好的。
 
 
 当然，自动依赖也有一些不足之处。需要我们去克服。
@@ -128,7 +125,7 @@ Hiipack 也提供了一个全局的方法`__hiipack__.resolve(module_name)`或�
 
 如果找到，返回模块的绝对路径，如果找不到，返回空。
 
-这样，解决上面的_**问题1**_，就有了思路:
+这样，解决上面的**_问题1_**，就有了思路:
 
 以`vue-loader`为例子，假如我们需要特定的版本`8.5.4`，我们可以把这个版本的`vue-loader`安装到项目中，然后使用`require.resolve("vue-loader")`获取到绝对路径，然后配置：
 
@@ -139,7 +136,7 @@ Hiipack 也提供了一个全局的方法`__hiipack__.resolve(module_name)`或�
 }
 ```
 
-那 _**问题2**_ 呢？
+那 **_问题2_** 呢？
 
 Hiipack 目前还没有去处理，如果被清除了，下次重新安装，保证代码正常运行，以后的版本中，Hiipack 会开辟其他的地方（比如：用户目录）去存储以避免这样的问题。
 
