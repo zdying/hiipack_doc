@@ -46,6 +46,34 @@ npm install mustache mustache-loader --save-dev`
 }
 ```
 
+也可以采用复杂的配置：
+
+```javascript
+{
+ // ...
+ extend: {
+     loaders: [{
+         /**
+          * 以这种"key:value"存在的配置，value 为 function
+          * hiipack 会先安装 key 中对应的模块，然后执行 value，并传入已经安装的模块
+          * value 返回的对象，会作为最终的 loader 对象传递给 webpack
+          */
+         "mustache mustache-loader": function(mustache, mustacheLoader){
+             // 这里还能做一些其他的操作，虽然对于loader来说，这里没啥可以操作的
+             return {
+                 test: /\.mustache$/,
+                 loader: "mustache-loader",
+                 // 也可以使用 __hii__.resolve()
+                 // loader: __hii__.resolve('mustache-loader')
+             }
+         }
+     }]
+ }
+}
+```
+
+
+
 有了上面的配置，**第一次**启动本地开发服务，或者`pack/min`的时候，就能看到 Hiipack 自动安装的日志了：
 
 ```bash
