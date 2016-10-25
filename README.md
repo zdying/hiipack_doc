@@ -11,9 +11,7 @@
 
 
 [![GitHub followers](https://img.shields.io/github/followers/hiipack.svg?style=social&label=Follow)](https://github.com/zdying/hiipack)
-
 [![GitHub stars](https://img.shields.io/github/stars/badges/hiipack.svg?style=social&label=Star)](https://github.com/zdying/hiipack)
-
 [![GitHub forks](https://img.shields.io/github/forks/badges/hiipack.svg?style=social&label=Fork)](https://github.com/zdying/hiipack)
 
 
