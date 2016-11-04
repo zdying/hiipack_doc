@@ -20,3 +20,10 @@ proxy.my-domain.com:3456
 
 ### registry
 
+配置`npm`源。
+
+比如:
+
+```
+http://registry.npm.corp.qunar.com/
+```
