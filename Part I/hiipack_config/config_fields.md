@@ -27,3 +27,12 @@ proxy.my-domain.com:3456
 ```
 http://registry.npm.corp.qunar.com/
 ```
+
+
+### sslKey
+
+ssl 证书私钥文件路径
+
+### sslCert
+
+ssl 证书文件路径
