@@ -33,6 +33,10 @@ http://registry.npm.corp.qunar.com/
 
 ssl 证书私钥文件路径
 
+> **注意：** 启动服务时，也可以传入参数`--ssl-key <key-file-path>`来指定，会覆盖全局配置的`sslKey`字段
+
 ### sslCert
 
 ssl 证书文件路径
+
+> **注意：** 启动服务时，也可以传入参数`--ssl-cert <cert-file-path>`来指定，会覆盖全局配置的`sslCert`字段
