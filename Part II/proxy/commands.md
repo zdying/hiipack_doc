@@ -1,6 +1,6 @@
 # 指令 {#command}
 
-`指令`（也称：`命令`）用于设置变量，或者对`request`\/`response`做一些操作。
+`指令`（也称：`命令`）用于设置变量，或者对`request`/`response`做一些操作。
 
 ## hiipack 支持的指令 {#supported-commands}
 
@@ -29,7 +29,7 @@ set $server hiipack;
 
 > 代理请求相关的指令，用于操作代理服务向目标服务器发送请求的`Request`对象。
 
-#### proxy\_pass {#proxy-pass}
+#### proxy_pass {#proxy-pass}
 
 _作用_：设置请求转发的目标地址
 
@@ -45,7 +45,7 @@ _例子_：
 proxy_pass http://some.example.com/some/path/;
 ```
 
-#### proxy\_set\_header {#proxy-set-header}
+#### proxy_set_header {#proxy-set-header}
 
 _作用_：设置请求头部字段
 
@@ -62,7 +62,7 @@ _例子_：
 proxy_set_header Host some.example.com
 ```
 
-#### proxy\_hide\_header {#proxy-hide-header}
+#### proxy_hide_header {#proxy-hide-header}
 
 _作用_：删除请求头部字段
 
@@ -78,7 +78,7 @@ _例子_：
 proxy_set_header Host some.example.com
 ```
 
-#### proxy\_set\_cookie {#proxy-set-cookie}
+#### proxy_set_cookie {#proxy-set-cookie}
 
 _作用_：设置请求Cookie
 
@@ -95,7 +95,7 @@ _例子_：
 proxy_set_cookie from hiipack;
 ```
 
-#### proxy\_hide\_cookie {#proxy-hide-cookie}
+#### proxy_hide_cookie {#proxy-hide-cookie}
 
 _作用_：删除请求Cookie字段
 
@@ -115,7 +115,7 @@ proxy_hide_cookie from;
 
 > 代理响应相关的指令用于配置代理服务器响应浏览器的`Response`对象。
 
-#### set\_header {#set-header}
+#### set_header {#set-header}
 
 _作用_：添加Header字段
 
@@ -132,7 +132,7 @@ _例子_：
 set_header SERVER HIIPACK;
 ```
 
-#### hide\_header {#hide-header}
+#### hide_header {#hide-header}
 
 _作用_：删除Header字段
 
@@ -148,7 +148,7 @@ _例子_：
 hide_header Server;
 ```
 
-#### set\_cookie {#set-cookie}
+#### set_cookie {#set-cookie}
 
 _作用_：设置Cookie字段
 
@@ -165,7 +165,7 @@ _例子_：
 set_cookie SESSION_ID 2BF36A09CB35FD71E;
 ```
 
-#### hide\_cookie {#hide-cookie}
+#### hide_cookie {#hide-cookie}
 
 _作用_：删除Cookie字段
 
@@ -179,5 +179,37 @@ _例子_：
 
 ```bash
 hide_cookie SESSION_ID;
+```
+
+#### alias {#alias}
+
+_作用_：将对应的`location`映射到本地目录
+
+_参数_：
+
+```bash
+path：本地路径，绝对路径
+```
+
+_例子_：
+
+```bash
+alias /Users/zdying/some/path/;
+```
+
+#### root {#root}
+
+_作用_：将对应的`location`映射到本地目录时的默认文件
+
+_参数_：
+
+```bash
+file_name：文件名称, 默认`index.html`
+```
+
+_例子_：
+
+```bash
+root index.html;
 ```
 
