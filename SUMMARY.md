@@ -8,7 +8,7 @@
     * [项目配置](Part I/config/README.md)
         * [配置文件](Part I/config/file.md)
         * [配置字段](Part I/config/field.md)
-        * [自定义插件\/loader](Part I/config/custom-plugins-loaders.md)
+        * [自定义插件/loader](Part I/config/custom-plugins-loaders.md)
     * [Hiipack全局配置](Part I/hiipack_config/README.md)
         * [配置命令](Part I/hiipack_config/cmd.md)
         * [支持的配置字段](Part I/hiipack_config/config_fields.md)
