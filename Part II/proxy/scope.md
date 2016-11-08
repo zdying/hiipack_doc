@@ -59,5 +59,7 @@ www1.test.com => {
 }
 ```
 
-上面的配置中，\#2、\#3和\#4处，都会执行配置在\#1处的指令，也就是说: `/`、`/index.html`和`/\/(native|gallery|picture|font|6cn)\/(.*)/`对应的请求，都会加上请求头部`Host`，值为`www.test.com`
+上面的配置中，\#2、\#3和\#4处，都会执行配置在\#1处的指令，也就是说: 
+
+> `/`、`/index.html`和`/\/(native|gallery|picture|font|6cn)\/(.*)/`对应的请求，都会加上请求头部`Host`，值为`www.test.com`
 
